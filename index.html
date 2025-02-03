@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta property="og:title" content="Davide Milicia - Portfolio">
+    <meta property="og:description" content="Junior Developer specializzato in AWS e sviluppo web">
+    <meta property="og:image" content="URL_IMMAGINE_ANTEPRIMA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davide Milicia</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #FF9900;  /* AWS Orange */
+            --secondary: #232F3E; /* AWS Dark Blue */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .hero {
+            background: var(--secondary);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .section {
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .badge {
+            background: var(--primary);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 0.5rem 0;
+            font-size: 0.9em;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: var(--secondary);
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--primary);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: var(--primary);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .skill-item {
+            text-align: center;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <h1>Davide Milicia</h1>
+        <p>Web Developer Junior & Junior Cloud AWS ☁️</p>
+        <div style="margin-top: 1rem">
+            <span class="badge"><i class="fab fa-aws"></i> AWS Cloud Practitioner</span>
+            <span class="badge"><i class="fab fa-linux"></i> Linux</span>
+            <span class="badge"><i class="fab fa-python"></i> Python</span>
+            <span class="badge"><i class="fab fa-html5"></i> HTML5</span>
+            <span class="badge"><i class="fab fa-css3-alt"></i> CSS3</span>
+        </div>
+    </header>
+
+    <section class="section">
+        <h2>📖 Percorso Formativo</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Certificazioni Cloud</h3>
+                <ul>
+                    <li>🏅 AWS Cloud Practitioner (in corso)</li>
+                    <li>🎯 AWS Solution Architect (obiettivo 2024)</li>
+                    <li>📘 Studio giornaliero di servizi AWS</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Competenze Tecniche</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fab fa-html5 fa-2x"></i>
+                        <p>HTML5 Avanzato</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-css3-alt fa-2x"></i>
+                        <p>CSS3 Moderno</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-python fa-2x"></i>
+                        <p>Python Base</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-linux fa-2x"></i>
+                        <p>Linux Base</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: #f8f9fa;">
+        <h2>📨 Contattami</h2>
+        <div class="contact-form">
+            <form>
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="Email" required>
+                <textarea rows="5" placeholder="Il tuo messaggio..." required></textarea>
+                <button type="submit"><i class="fas fa-paper-plane"></i> Invia Messaggio</button>
+            </form>
+            
+            <div class="social-links">
+    <a href="https://www.linkedin.com/in/davide-milicia-035563233/" target="_blank">
+        <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://instagram.com/davide.m.99" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="mailto:davidemilicia9@gmail.com">
+        <i class="fas fa-envelope"></i>
+    </a>
+</div>        
+    </section>
+</body>
+</html>
