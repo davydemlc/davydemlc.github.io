@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Davide Milicia - Portfolio">
     <meta property="og:description" content="Junior Developer specializzato in AWS e sviluppo web">
     <meta property="og:image" content="URL_IMMAGINE_ANTEPRIMA">
     <meta name="twitter:card" content="summary_large_image">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Davide Milicia</title>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
             --primary: #FF9900;  /* AWS Orange */
@@ -122,12 +122,39 @@
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
+
+        /* Stile per il pulsante WhatsApp */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white !important;
+            padding: 15px;
+            border-radius: 50px;
+            text-decoration: none;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.05);
+        }
+
+        .whatsapp-button i {
+            font-size: 24px;
+        }
     </style>
 </head>
 <body>
     <header class="hero">
         <h1>Davide Milicia</h1>
-        <p>Web Developer Junior & Junior Cloud AWS ☁️</p>
+        <p>Web Developer & Cloud AWS Junior ☁️</p>
         <div style="margin-top: 1rem">
             <span class="badge"><i class="fab fa-aws"></i> AWS Cloud Practitioner</span>
             <span class="badge"><i class="fab fa-linux"></i> Linux</span>
@@ -143,7 +170,7 @@
             <div class="card">
                 <h3>Certificazioni Cloud</h3>
                 <ul>
-                    <li>🏅 AWS Cloud Practitioner (in corso)</li>
+                    <li>🏅 AWS Cloud Practitioners (in corso)</li>
                     <li>🎯 AWS Solution Architect (obiettivo 2024)</li>
                     <li>📘 Studio giornaliero di servizi AWS</li>
                 </ul>
@@ -154,19 +181,19 @@
                 <div class="skills-grid">
                     <div class="skill-item">
                         <i class="fab fa-html5 fa-2x"></i>
-                        <p>HTML5 Avanzato</p>
+                        <p>HTML5</p>
                     </div>
                     <div class="skill-item">
                         <i class="fab fa-css3-alt fa-2x"></i>
-                        <p>CSS3 Moderno</p>
+                        <p>CSS3 </p>
                     </div>
                     <div class="skill-item">
                         <i class="fab fa-python fa-2x"></i>
-                        <p>Python Base</p>
+                        <p>Python</p>
                     </div>
                     <div class="skill-item">
                         <i class="fab fa-linux fa-2x"></i>
-                        <p>Linux Base</p>
+                        <p>Linux</p>
                     </div>
                 </div>
             </div>
@@ -184,16 +211,24 @@
             </form>
             
             <div class="social-links">
-    <a href="https://www.linkedin.com/in/davide-milicia-035563233/" target="_blank">
-        <i class="fab fa-linkedin"></i>
-    </a>
-    <a href="https://instagram.com/davide.m.99" target="_blank">
-        <i class="fab fa-instagram"></i>
-    </a>
-    <a href="mailto:davidemilicia9@gmail.com">
-        <i class="fas fa-envelope"></i>
-    </a>
-</div>        
+                <a href="https://www.linkedin.com/in/davide-milicia-035563233/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://instagram.com/davide.m.99" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:davidemilicia9@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
     </section>
+
+    <!-- Pulsante WhatsApp -->
+    <a href="https://wa.me/+393450893995?text=Ciao%20Davide,%20ho%20visto%20il%20tuo%20portfolio!" 
+       class="whatsapp-button">
+        <i class="fab fa-whatsapp"></i>
+        Scrivimi
+    </a>
 </body>
 </html>
