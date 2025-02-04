@@ -1,236 +1,53 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<script>
-document.addEventListener('keydown', function(e) {
-    if (e.ctrlKey && e.keyCode == 85) { // Ctrl+U
-        e.preventDefault();
-        return false;
-    }
-});
-document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-    return false;
-});
-</script>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Davide Milicia - Portfolio">
-    <meta property="og:description" content="Junior Developer specializzato in AWS e sviluppo web">
-    <meta property="og:image" content="URL_IMMAGINE_ANTEPRIMA">
-    <meta name="twitter:card" content="summary_large_image">
+	<!-- Migliora visualizzazione pagina -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Titolo e descrizione -->
     <title>Davide Milicia</title>
+	<meta name="description"                content="Junior Developer specializzato in AWS e sviluppo web">
+
+	<!-- Tag OpenGraph (Facebook) -->
+	<meta property="og:title"               content="Davide Milicia - Portfolio">
+	<meta property="og:description"         content="Junior Developer specializzato in AWS e sviluppo web">
+	<meta property="og:site_name"           content="Davide Milicia">
+	<meta property="og:type"                content="website">
+	<meta property="og:url"                 content="https://davydemlc.github.io">
+	<!--
+    Abilita questi tag solo dopo aver aggiunto un banner.
+    <meta property="og:image"               content="/banner.png">
+    <meta property="og:image:alt"           content="Davide Milicia">
+    <meta property="og:image:height"        content="600">
+    <meta property="og:image:width"         content="1200">
+    -->
+
+	<!-- Tag Twitter/X -->
+	<meta property="twitter:title"          content="Davide Milicia - Portfolio">
+	<meta property="twitter:description"    content="Junior Developer specializzato in AWS e sviluppo web">
+	<meta property="twitter:url"            content="https://davydemlc.github.io">
+	<!--
+    Abilita questi tag solo dopo aver aggiunto un banner.
+    <meta name="twitter:card"               content="summary_large_image">
+    <meta property="twitter:image"          content="/banner.png">
+    -->
+
+    <!-- Icone FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #FF9900;  /* AWS Orange */
-            --secondary: #232F3E; /* AWS Dark Blue */
-        }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', sans-serif;
-        }
+    <!-- Stili -->
+    <link rel="stylesheet" href="style.css">
 
-@media screen and (max-width: 768px) {
-    .hero {
-        padding: 2rem 1rem;
-    }
-    
-    .badge {
-        margin: 0.25rem;
-    }
-    
-    .soft-skills {
-        gap: 0.5rem;
-    }
-    
-    .soft-skill-badge {
-        font-size: 0.8em;
-        padding: 0.4rem 0.8rem;
-    }
-    
-    .card {
-        padding: 1.5rem;
-    }
-    
-    .section {
-        padding: 2rem 1rem;
-    }
-    
-    .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    }
-}
-        
-        body {
-            line-height: 1.6;
-            color: #333;
-        }
-
-        .hero {
-            background: var(--secondary);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-
-        .section {
-            padding: 3rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .card {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--primary);
-        }
-
-        .badge {
-            background: var(--primary);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            display: inline-block;
-            margin: 0.5rem 0;
-            font-size: 0.9em;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .social-links a {
-            color: var(--secondary);
-            font-size: 1.5rem;
-            transition: color 0.3s;
-        }
-
-        .social-links a:hover {
-            color: var(--primary);
-        }
-
-        .contact-form {
-            max-width: 600px;
-            margin: 2rem auto;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 1rem;
-            border: 2px solid #ddd;
-            border-radius: 4px;
-        }
-
-        button {
-            background: var(--secondary);
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        button:hover {
-            background: var(--primary);
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .skill-item {
-            text-align: center;
-            padding: 1rem;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        /* Stile per il pulsante WhatsApp */
-        .whatsapp-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25D366;
-            color: white !important;
-            padding: 15px;
-            border-radius: 50px;
-            text-decoration: none;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 16px;
-            transition: transform 0.3s ease;
-        }
-
-        .whatsapp-button:hover {
-            transform: scale(1.05);
-        }
-
-        .whatsapp-button i {
-            font-size: 24px;
-        }
-
-        /* Nuovi stili per le barre di progresso */
-        .progress-bar {
-            width: 100%;
-            height: 10px;
-            background-color: #eee;
-            border-radius: 5px;
-            margin-top: 0.5rem;
-            overflow: hidden;
-        }
-
-        .progress {
-            height: 100%;
-            background-color: var(--primary);
-            transition: width 0.3s ease;
-        }
-
-        /* Stile per soft skills */
-        .soft-skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .soft-skill-badge {
-            background: var(--secondary);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9em;
-        }
-    </style>
+    <!-- Script -->
+    <script src="script.js"></script>
 </head>
+
 <body>
     <header class="hero">
         <h1>Davide Milicia</h1>
         <p>Web Developer & Cloud AWS Junior ☁️</p>
+
         <div style="margin-top: 1rem">
             <span class="badge"><i class="fab fa-aws"></i> AWS Cloud Practitioner</span>
             <span class="badge"><i class="fab fa-linux"></i> Linux</span>
@@ -243,9 +60,11 @@ document.addEventListener('contextmenu', function(e) {
 
     <section class="section">
         <h2>📖 Percorso Formativo</h2>
+
         <div class="card-grid">
             <div class="card">
                 <h3>Certificazioni Cloud</h3>
+
                 <ul>
                     <li>🏅 AWS Cloud Practitioners (in corso)</li>
                     <li>🎯 AWS Solution Architect (obiettivo 2025)</li>
@@ -255,38 +74,48 @@ document.addEventListener('contextmenu', function(e) {
 
             <div class="card">
                 <h3>Competenze Tecniche</h3>
+
                 <div class="skills-grid">
                     <div class="skill-item">
                         <i class="fab fa-html5 fa-2x"></i>
                         <p>HTML5</p>
+
                         <div class="progress-bar">
                             <div class="progress" style="width: 85%"></div>
                         </div>
                     </div>
+
                     <div class="skill-item">
                         <i class="fab fa-css3-alt fa-2x"></i>
                         <p>CSS3</p>
+
                         <div class="progress-bar">
                             <div class="progress" style="width: 80%"></div>
                         </div>
                     </div>
+
                     <div class="skill-item">
                         <i class="fab fa-python fa-2x"></i>
                         <p>Python</p>
+
                         <div class="progress-bar">
                             <div class="progress" style="width: 60%"></div>
                         </div>
                     </div>
+
                     <div class="skill-item">
                         <i class="fab fa-linux fa-2x"></i>
                         <p>Linux</p>
+
                         <div class="progress-bar">
                             <div class="progress" style="width: 40%"></div>
                         </div>
                     </div>
+
                     <div class="skill-item">
                         <i class="fas fa-database fa-2x"></i>
                         <p>SQL</p>
+
                         <div class="progress-bar">
                             <div class="progress" style="width: 50%"></div>
                         </div>
@@ -296,6 +125,7 @@ document.addEventListener('contextmenu', function(e) {
 
             <div class="card">
                 <h3>Soft Skills</h3>
+
                 <div class="soft-skills">
                     <span class="soft-skill-badge">Problem Solving</span>
                     <span class="soft-skill-badge">Team Work</span>
@@ -312,15 +142,17 @@ document.addEventListener('contextmenu', function(e) {
 
     <section class="section" style="background: #f8f9fa;">
         <h2>📨 Contattami</h2>
+
         <div class="contact-form">
-           
              <div class="social-links">
                 <a href="https://www.linkedin.com/in/davide-milicia-035563233/" target="_blank">
                     <i class="fab fa-linkedin"></i>
                 </a>
+
                 <a href="https://instagram.com/davide.m.99" target="_blank">
                     <i class="fab fa-instagram"></i>
                 </a>
+
                 <a href="mailto:davidemilicia9@gmail.com">
                     <i class="fas fa-envelope"></i>
                 </a>
@@ -329,10 +161,10 @@ document.addEventListener('contextmenu', function(e) {
     </section>
 
     <!-- Pulsante WhatsApp -->
-    <a href="https://wa.me/+393450893995?text=Ciao%20Davide,%20ho%20visto%20il%20tuo%20portfolio!" 
-       class="whatsapp-button">
-        <i class="fab fa-whatsapp"></i>
-        Scrivimi
+    <a href="https://wa.me/+393450893995?text=Ciao%20Davide,%20ho%20visto%20il%20tuo%20portfolio!"
+    class="whatsapp-button">
+       <i class="fab fa-whatsapp"></i>
+       Scrivimi
     </a>
 </body>
 </html>
