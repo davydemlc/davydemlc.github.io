@@ -38,6 +38,38 @@ button:hover {
 	background: var(--primary)
 }
 
+/* Contenuti per dispositivi con larghezza <= 768px */
+@media screen and (max-width: 768px) {
+	.badge {
+		margin: 0.25rem
+	}
+
+	.card {
+		padding: 1.5rem
+	}
+
+	.hero {
+		padding: 2rem 1rem
+	}
+
+	.section {
+		padding: 2rem 1rem
+	}
+
+	.skills-grid {
+		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr))
+	}
+
+	.soft-skills {
+		gap: 0.5rem
+	}
+
+	.soft-skill-badge {
+		font-size: 0.8em;
+		padding: 0.4rem 0.8rem
+	}
+}
+
 .badge {
 	background: var(--primary);
 	border-radius: 20px;
@@ -168,36 +200,4 @@ button:hover {
 
 .whatsapp-button i {
 	font-size: 24px
-}
-
-/* Contenuti per dispositivi con larghezza <= 768px */
-@media screen and (max-width: 768px) {
-	.badge {
-		margin: 0.25rem
-	}
-
-	.card {
-		padding: 1.5rem
-	}
-
-	.hero {
-		padding: 2rem 1rem
-	}
-
-	.section {
-		padding: 2rem 1rem
-	}
-
-	.skills-grid {
-		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr))
-	}
-
-	.soft-skills {
-		gap: 0.5rem
-	}
-
-	.soft-skill-badge {
-		font-size: 0.8em;
-		padding: 0.4rem 0.8rem
-	}
 }
