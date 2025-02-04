@@ -35,6 +35,37 @@ document.addEventListener('contextmenu', function(e) {
             font-family: 'Segoe UI', sans-serif;
         }
 
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 2rem 1rem;
+    }
+    
+    .badge {
+        margin: 0.25rem;
+    }
+    
+    .soft-skills {
+        gap: 0.5rem;
+    }
+    
+    .soft-skill-badge {
+        font-size: 0.8em;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .section {
+        padding: 2rem 1rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
+        
         body {
             line-height: 1.6;
             color: #333;
