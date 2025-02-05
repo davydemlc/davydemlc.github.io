@@ -1,0 +1,203 @@
+/* Variabili */
+:root {
+	--primary:   #FF9900; /* AWS Orange    */
+	--secondary: #232F3E; /* AWS Dark Blue */
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+	line-height: 1.6;
+	color: #333;
+}
+
+input, textarea {
+	border-radius: 4px;
+	border: 2px solid #ddd;
+	margin-bottom: 1rem;
+	padding: 0.8rem;
+	width: 100%;
+}
+
+button {
+	background: var(--secondary);
+	border-radius: 5px;
+	border: none;
+	color: white;
+	cursor: pointer;
+	padding: 1rem 2rem;
+	transition: background 0.3s;
+}
+
+button:hover {
+	background: var(--primary)
+}
+
+/* Contenuti per dispositivi con larghezza <= 768px */
+@media screen and (max-width: 768px) {
+	.badge {
+		margin: 0.25rem
+	}
+
+	.card {
+		padding: 1.5rem
+	}
+
+	.hero {
+		padding: 2rem 1rem
+	}
+
+	.section {
+		padding: 2rem 1rem
+	}
+
+	.skills-grid {
+		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr))
+	}
+
+	.soft-skills {
+		gap: 0.5rem
+	}
+
+	.soft-skill-badge {
+		font-size: 0.8em;
+		padding: 0.4rem 0.8rem
+	}
+}
+
+.badge {
+	background: var(--primary);
+	border-radius: 20px;
+	color: white;
+	display: inline-block;
+	font-size: 0.9em;
+	margin: 0.5rem 0;
+	padding: 0.3rem 0.8rem;
+}
+
+.card {
+	background: #f8f9fa;
+	border-left: 4px solid var(--primary);
+	border-radius: 8px;
+	padding: 2rem;
+}
+
+.card-grid {
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	margin-top: 2rem;
+}
+
+.contact-form {
+	max-width: 600px;
+	margin: 2rem auto;
+}
+
+.hero {
+	background: var(--secondary);
+	color: white;
+	padding: 4rem 2rem;
+	text-align: center;
+}
+
+/* Barre di progresso */
+.progress-bar {
+	background-color: #eee;
+	border-radius: 5px;
+	height: 10px;
+	margin-top: 0.5rem;
+	overflow: hidden;
+	width: 100%;
+}
+
+.progress {
+	background-color: var(--primary);
+	height: 100%;
+	transition: width 0.3s ease;
+}
+
+.section {
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 3rem 2rem;
+}
+
+.skills-grid {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	margin-top: 1rem;
+}
+
+.skill-item {
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	padding: 1rem;
+	text-align: center;
+}
+
+.social-links {
+	display: flex;
+	gap: 2rem;
+	justify-content: center;
+	margin-top: 2rem;
+}
+
+.social-links a {
+	color: var(--secondary);
+	font-size: 1.5rem;
+	transition: color 0.3s;
+}
+
+.social-links a:hover {
+	color: var(--primary)
+}
+
+.soft-skills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.soft-skill-badge {
+	background: var(--secondary);
+	border-radius: 20px;
+	color: white;
+	font-size: 0.9em;
+	padding: 0.5rem 1rem;
+}
+
+/* Pulsante WhatsApp */
+.whatsapp-button {
+	align-items: center;
+	background: #25D366;
+	border-radius: 50px;
+	bottom: 20px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+	color: white !important;
+	display: flex;
+	font-size: 16px;
+	gap: 8px;
+	padding: 15px;
+	position: fixed;
+	right: 20px;
+	text-decoration: none;
+	transition: transform 0.3s ease;
+	z-index: 1000;
+}
+
+.whatsapp-button:hover {
+	transform: scale(1.05)
+}
+
+.whatsapp-button i {
+	font-size: 24px
+}
